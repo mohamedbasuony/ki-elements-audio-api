@@ -2,9 +2,11 @@
 This repository is for the Ki-Elements Audio API, a Flask-based RESTful API designed to manage and serve audio files securely.
 
 Prerequisites
+-
 - Install python on your machine.
 
 Getting Started
+-
 - Clone the repository:
   git clone https://github.com/your-username/ki-elements-audio-api.git
 
@@ -15,13 +17,13 @@ Getting Started
   pip install -r requirements.txt
 
 How To Use It:
+-
 - Run the flask application:
   python flask_audio_api.py
 
 - Now accessible at http://localhost:5000
 
   Endpoints
-
   - Authentication is required before using any endpoint. Therefore, make sure to include the following username and password
     in your URL:
     Username: Basuony
@@ -58,6 +60,7 @@ How To Use It:
 
 
 Testing: 
+-
   To run the unittests available with the API: run the following line:
   python test_audio_api.py
   
