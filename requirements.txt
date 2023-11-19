@@ -1,0 +1,5 @@
+# Basic dependencies
+Flask==3.0.0
+Flask_HTTPAuth==4.8.0
+Werkzeug==3.0.1
+
