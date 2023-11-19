@@ -1,69 +1,82 @@
-# ki-elements-audio-api
+# Ki-Elements Audio API
+
 This repository is for the Ki-Elements Audio API, a Flask-based RESTful API designed to manage and serve audio files securely.
 
-Prerequisites
--
-- Install python on your machine.
+## Prerequisites
 
-Getting Started
--
-- Clone the repository:
-  git clone https://github.com/your-username/ki-elements-audio-api.git
+Make sure you have Python installed on your machine.
 
-- Go into its directory:
-  cd ki-elements-audio-api
+## Getting Started
 
-- Install the required dependencies:
-  pip install -r requirements.txt
+1. Clone the repository:
 
-How To Use It:
--
-- Run the flask application:
-  python flask_audio_api.py
+    ```bash
+    git clone https://github.com/your-username/ki-elements-audio-api.git
+    ```
 
-- Now accessible at http://localhost:5000
+2. Go into its directory:
 
-  Endpoints
-  - Authentication is required before using any endpoint. Therefore, make sure to include the following username and password
-    in your URL:
-    Username: Basuony
-    Password: 12345
-    The URL should look something like this: http://Basuony:12345@127.0.0.1:5000/
+    ```bash
+    cd ki-elements-audio-api
+    ```
 
-  - Home Page
-    URL: '/'
-    Method: 'GET'
-    Description: Retrieve a greeting message.
+3. Install the required dependencies:
 
-  - Get Audio Files
-    URL: '/audio'
-    Method: 'GET'
-    Description: Get a list of all available audio files and their details
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-  - Get a Specific Audio File
-    URL: '/audio/<file_name>'
-    Method: 'GET'
-    Description: Get a specific audio file using its name
+## How To Use It
 
-  - Upload Audio File
-    URL: 'audio'
-    Method:'POST'
-    Description: Upload a new audio file.
-      JSON Schema used: http://json-schema.org/draft-07/schema#
-      Request Body:
-        {
-          "file": {
-            "filename": "your_filename.mp3",
-            "data": "base64_encoded_audio_data_here"
-                  }
-        }
+1. Run the Flask application:
 
+    ```bash
+    python flask_audio_api.py
+    ```
 
-Testing: 
--
-  To run the unittests available with the API: run the following line:
-  python test_audio_api.py
-  
-  
+2. Now accessible at [http://localhost:5000](http://localhost:5000).
 
+## Endpoints
 
+- **Authentication is required before using any endpoint. Include the following username and password in your URL:**
+  - **Username:** Basuony
+  - **Password:** 12345
+  - **URL example:** [http://Basuony:12345@127.0.0.1:5000/](http://Basuony:12345@127.0.0.1:5000/)
+
+1. **Home Page**
+   - **URL:** `/`
+   - **Method:** `GET`
+   - **Description:** Retrieve a greeting message.
+
+2. **Get Audio Files**
+   - **URL:** `/audio`
+   - **Method:** `GET`
+   - **Description:** Get a list of all available audio files and their details.
+
+3. **Get a Specific Audio File**
+   - **URL:** `/audio/<file_name>`
+   - **Method:** `GET`
+   - **Description:** Get a specific audio file using its name.
+
+4. **Upload Audio File**
+   - **URL:** `/audio`
+   - **Method:** `POST`
+   - **Description:** Upload a new audio file.
+   - **JSON Schema:** [http://json-schema.org/draft-07/schema#](http://json-schema.org/draft-07/schema#)
+   - **Request Body Example:**
+     ```json
+     {
+       "file": {
+         "filename": "your_filename.mp3",
+         "data": "base64_encoded_audio_data_here"
+       }
+     }
+     ```
+
+## Testing
+
+To run the unit tests available with the API, use the following command:
+
+```bash
+python test_audio_api.py
+```
